@@ -1,0 +1,13 @@
+version: '2'
+services:
+    registry:
+        image: registry:2
+        ports:
+            - '5000:5000'
+        volumes:
+            - ./registry:/var/lib/registry
+            - ./configs/mirror_config/config.yml:/etc/docker/registry/config.yml
+        restart: always
+    redis:
+        image: redis:latest
+        restart: always
