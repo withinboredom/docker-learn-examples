@@ -1,0 +1,8 @@
+version: '2'
+services:
+    example:
+        image: ubuntu:16.04
+        volumes:
+            - ./C:/app
+            - ./B:/app/D
+        command: "cat /app/D/content"
